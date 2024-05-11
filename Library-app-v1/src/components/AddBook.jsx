@@ -15,6 +15,12 @@ const AddBook = ({ handleNewBooksAddition }) => {
     const bookGenrePassedToParent = bookGenreInputElement.current.value;
     const bookCoverLinkPassedToParent = bookCoverLinkInputElement.current.value;
 
+    bookNameInputElement.current.value = "";
+    bookAuthorInputElement.current.value = "";
+    bookDescriptionInputElement.current.value = "";
+    bookDescriptionInputElement.current.value = "";
+    bookCoverLinkInputElement.current.value = "";
+
     handleNewBooksAddition(
       bookNamePassedToParent,
       bookAuthorPassedToParent,

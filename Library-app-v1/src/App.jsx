@@ -44,17 +44,18 @@ function App() {
     enteredUrl
   ) => {
     setBooksToDisplay((currentValue) => {
-    const newBooksToDisplay = [
+      const newBooksToDisplay = [
         ...currentValue,
-      {
-        name: enteredBookName,
-        author: enteredAuthorName,
-        genre: enteredGenre,
-        description: enteredDescription,
-        coverUrl: enteredUrl,
-      },
-    ];
-    setBooksToDisplay(newBooksToDisplay);
+        {
+          name: enteredBookName,
+          author: enteredAuthorName,
+          genre: enteredGenre,
+          description: enteredDescription,
+          coverUrl: enteredUrl,
+        },
+      ];
+      return newBooksToDisplay;
+    });
   };
 
   return (
