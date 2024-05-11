@@ -1,19 +1,19 @@
-const Book = () => {
+const Book = ({ name, author, description, genre, coverUrl }) => {
   return (
     <>
       <div className="card" style={{ width: "20rem" }}>
         <img
-          src="https://rukminim2.flixcart.com/image/850/1000/khs11u80-0/regionalbooks/a/x/c/wings-of-fire-an-autobiography-of-abdul-kalam-original-imafxphjg7zhf6yy.jpeg?q=90&crop=false"
+          src={coverUrl}
           className="card-img-top"
-          alt="..."
+          alt={`Book by ${author}`}
         ></img>
         <div className="card-body">
-          <h5 className="card-title">Book Name</h5>
-          <p className="card-text">short description about book</p>
+          <h5 className="card-title">{name}</h5>
+          <p className="card-text">{description}</p>
         </div>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">Author</li>
-          <li className="list-group-item">Genre</li>
+          <li className="list-group-item">Author : {author}</li>
+          <li className="list-group-item">Genre : {genre}</li>
         </ul>
       </div>
     </>
