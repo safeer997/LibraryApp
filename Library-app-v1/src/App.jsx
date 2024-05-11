@@ -43,8 +43,9 @@ function App() {
     enteredDescription,
     enteredUrl
   ) => {
+    setBooksToDisplay((currentValue) => {
     const newBooksToDisplay = [
-      ...booksToDisplay,
+        ...currentValue,
       {
         name: enteredBookName,
         author: enteredAuthorName,
