@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import styles from "./AddBook.module.css"; 
 
 const AddBook = ({ handleNewBooksAddition }) => {
   const bookNameInputElement = useRef();
@@ -29,60 +30,67 @@ const AddBook = ({ handleNewBooksAddition }) => {
       bookCoverLinkPassedToParent
     );
   };
+
   return (
-    <>
-      <div>
-        <p>Add your books here </p>
-        <div className="container text-center">
-          <div className="row">
-            <div className="col">
-              <input
-                type="text"
-                ref={bookNameInputElement}
-                placeholder="enter book name"
-              ></input>
-            </div>
-            <div className="col">
-              <input
-                type="text"
-                ref={bookAuthorInputElement}
-                placeholder="enter author name "
-              ></input>
-            </div>
-            <div className="col">
-              <input
-                type="text"
-                ref={bookGenreInputElement}
-                placeholder="enter book genre"
-              ></input>
-            </div>
-            <div className="col">
-              <input
-                type="text"
-                ref={bookDescriptionInputElement}
-                placeholder="enter book description"
-              ></input>
-            </div>
-            <div className="col">
-              <input
-                type="text"
-                ref={bookCoverLinkInputElement}
-                placeholder="enter link to cover"
-              ></input>
-            </div>
-            <div className="col">
-              <button
-                onClick={handleAddButtonBookDetailsInput}
-                type="button"
-                className="btn btn-primary"
-              >
-                Add Book
-              </button>
-            </div>
+    <div className={styles["add-book-container"]}>
+      <div className={styles["add-book-header"]}>
+        <p className={styles["add-book-title"]}>Add your books here</p>
+      </div>
+      <div className="container text-center">
+        <div className="row">
+          <div className="col">
+            <input
+              type="text"
+              ref={bookNameInputElement}
+              className={styles["add-book-input"]}
+              placeholder="Enter book name"
+            ></input>
+          </div>
+          <div className="col">
+            <input
+              type="text"
+              ref={bookAuthorInputElement}
+              className={styles["add-book-input"]}
+              placeholder="Enter author name"
+            ></input>
+          </div>
+          <div className="col">
+            <input
+              type="text"
+              ref={bookGenreInputElement}
+              className={styles["add-book-input"]}
+              placeholder="Enter book genre"
+            ></input>
+          </div>
+          <div className="col">
+            <input
+              type="text"
+              ref={bookDescriptionInputElement}
+              className={styles["add-book-input"]}
+              placeholder="Enter book description"
+            ></input>
+          </div>
+          <div className="col">
+            <input
+              type="text"
+              ref={bookCoverLinkInputElement}
+              className={styles["add-book-input"]}
+              placeholder="Enter link to cover"
+            ></input>
+          </div>
+          <div className="col">
+            <button
+              onClick={handleAddButtonBookDetailsInput}
+              type="button"
+              className={styles["add-book-button"]}
+            >
+              Add Book
+            </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
+
 export default AddBook;

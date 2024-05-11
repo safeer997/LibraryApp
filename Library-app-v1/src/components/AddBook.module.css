@@ -1,0 +1,37 @@
+.add-book-container {
+  background-color: #343a40; 
+  background-color: red;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.add-book-header {
+  text-align: center;
+}
+
+.add-book-title {
+  font-size: 50px; 
+  color: #000000;
+}
+
+.add-book-input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add-book-button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-book-button:hover {
+  background-color: #0056b3;
+}
