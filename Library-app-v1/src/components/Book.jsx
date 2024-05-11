@@ -1,4 +1,7 @@
-const Book = ({ name, author, description, genre, coverUrl }) => {
+const Book = ({ name, author, description, genre, coverUrl ,handleDeleteButton}) => {
+  const handleDelete = ()=>{
+    handleDeleteButton(name);
+  }
   return (
     <>
       <div className="card" style={{ width: "20rem" }}>
@@ -14,6 +17,11 @@ const Book = ({ name, author, description, genre, coverUrl }) => {
         <ul className="list-group list-group-flush">
           <li className="list-group-item">Author : {author}</li>
           <li className="list-group-item">Genre : {genre}</li>
+          <li className="list-group-item">
+            <button onClick={handleDelete} type="button" className="btn btn-danger">
+              Delete Book
+            </button>
+          </li>
         </ul>
       </div>
     </>

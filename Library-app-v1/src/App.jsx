@@ -58,10 +58,20 @@ function App() {
     });
   };
 
+  const handleDeleteButton = (nameOfBookTobeDeleted) => {
+    const newBookList = booksToDisplay.filter(
+      (book) => book.name !== nameOfBookTobeDeleted
+    );
+    setBooksToDisplay(newBookList);
+  };
+
   return (
     <>
       <Header></Header>
-      <BookDisplay books={booksToDisplay}></BookDisplay>
+      <BookDisplay
+        books={booksToDisplay}
+        handleDeleteButton={handleDeleteButton}
+      ></BookDisplay>
       <AddBook handleNewBooksAddition={handleNewBooksAddition}></AddBook>
       <Footer></Footer>
     </>

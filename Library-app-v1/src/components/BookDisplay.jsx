@@ -1,5 +1,5 @@
 import Book from "./Book";
-const BookDisplay = ({ books}) => {
+const BookDisplay = ({ books,handleDeleteButton}) => {
   return (
     <>
       <div>
@@ -14,6 +14,7 @@ const BookDisplay = ({ books}) => {
                     genre={book.genre}
                     description={book.description}
                     coverUrl={book.coverUrl}
+                    handleDeleteButton={handleDeleteButton}
                   ></Book>
                 </div>
               );
